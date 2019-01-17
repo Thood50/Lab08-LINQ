@@ -4,7 +4,14 @@ using System.Text;
 
 namespace LINQ.Classes
 {
-    class Feature
+    public enum FeatureType { Feature };
+
+    public class Feature
     {
+        public FeatureType Type { get; set; }
+
+        public Geometry Geometry { get; set; }
+
+        public Properties Properties { get; set; }
     }
 }

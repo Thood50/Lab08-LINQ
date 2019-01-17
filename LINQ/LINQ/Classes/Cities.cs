@@ -4,7 +4,10 @@ using System.Text;
 
 namespace LINQ.Classes
 {
-    class Cities
+    public class Cities
     {
+        public string Type { get; set; }
+
+        public List<Feature> Features { get; set; }
     }
 }
