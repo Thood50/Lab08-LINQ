@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
+    <PackageReference Include="xunit" Version="2.4.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LINQ\LINQ.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Linked_List">
+      <HintPath>..\..\..\..\401-data-structures-and-algorithms\Data Structures\Linked_List\Linked_List\bin\Debug\netcoreapp2.2\Linked_List.dll</HintPath>
+    </Reference>
+    <Reference Include="ll_kth_from_end">
+      <HintPath>..\..\..\..\401-data-structures-and-algorithms\Challenges\ll_kth_from_end\ll_kth_from_end\bin\Debug\netcoreapp2.2\ll_kth_from_end.dll</HintPath>
+    </Reference>
+    <Reference Include="LL_merge">
+      <HintPath>..\..\..\..\401-data-structures-and-algorithms\Challenges\LL_merge\LL_merge\LL_merge\bin\Debug\netcoreapp2.2\LL_merge.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
