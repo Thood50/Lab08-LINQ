@@ -36,7 +36,8 @@ namespace LINQ
             Console.WriteLine("1. All Neighbor Hoods with no filter");
             Console.WriteLine("2. Neighbor Hoods with a proper name");
             Console.WriteLine("3. Proper and Unique Neighbor hoods");
-            Console.WriteLine("4. Exit Application");
+            Console.WriteLine("4. Filter with one query");
+            Console.WriteLine("5. Exit");
             string input = Console.ReadLine();
             Interface(data, input);            
         }
@@ -79,6 +80,17 @@ namespace LINQ
                     break;
 
                 case "4":
+                    Console.WriteLine("One Query : with valid names & no duplicates");
+                    Console.WriteLine();
+                    OneQuery(data);
+                    Console.WriteLine();
+                    Console.WriteLine("Press Enter to return to Main page");
+                    Console.ReadLine();
+                    Console.Clear();
+                    Prompt(data);
+                    break;
+
+                case "5":
                     Environment.Exit(1);
                     break;
 
