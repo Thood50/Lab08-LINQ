@@ -15,7 +15,8 @@ namespace LINQ
         {
             Console.WriteLine("Hello World!");
             Cities data = ReadJSON();
-            PrintData(data);
+            //PrintAllNeighborHoods(data);
+            PrintAllNeighborHoodsWithName(data);
             Console.ReadLine();
 
         }
@@ -29,16 +30,29 @@ namespace LINQ
             return data;
         }
 
-        public static void PrintData(Cities data)
+        public static void PrintAllNeighborHoods(Cities data)
         {
             var selected = from x in data.Features
                            where x.Properties.Neighborhood != null
                            select x.Properties.Neighborhood;
+
             foreach (var item in selected)
             {
                 Console.WriteLine(item);
             }
             
+        }
+
+        public static void PrintAllNeighborHoodsWithName(Cities data)
+        {
+            var selected = from x in data.Features
+                           where x.Properties.Neighborhood != ""
+                           select x.Properties.Neighborhood;
+
+            foreach (var item in selected)
+            {
+                Console.WriteLine(item);
+            }
         }
 
         
