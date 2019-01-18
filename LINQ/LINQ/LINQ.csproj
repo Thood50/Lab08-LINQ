@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Linked_List">
+      <HintPath>..\..\..\..\401-data-structures-and-algorithms\Data Structures\Linked_List\Linked_List\bin\Debug\netcoreapp2.2\Linked_List.dll</HintPath>
+    </Reference>
+    <Reference Include="ll_kth_from_end">
+      <HintPath>..\..\..\..\401-data-structures-and-algorithms\Challenges\ll_kth_from_end\ll_kth_from_end\bin\Debug\netcoreapp2.2\ll_kth_from_end.dll</HintPath>
+    </Reference>
+    <Reference Include="LL_merge">
+      <HintPath>..\..\..\..\401-data-structures-and-algorithms\Challenges\LL_merge\LL_merge\LL_merge\bin\Debug\netcoreapp2.2\LL_merge.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+  </ItemGroup>
+
+</Project>
