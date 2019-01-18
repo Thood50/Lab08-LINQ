@@ -139,7 +139,9 @@ namespace LINQ
         {
             var selected = data.Features.Where(x => x.Properties.Neighborhood != null)
                                         .Where(x => x.Properties.Neighborhood != "")
-                                        .Select(y => y.First());
+                                        .select x.Properties.Neighborhood;
+
+            selected = selected.Distinct();
 
             foreach (var item in selected)
             {
