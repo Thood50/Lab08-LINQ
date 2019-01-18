@@ -139,13 +139,12 @@ namespace LINQ
         {
             var selected = data.Features.Where(x => x.Properties.Neighborhood != null)
                                         .Where(x => x.Properties.Neighborhood != "")
-                                        .select x.Properties.Neighborhood;
-
-            selected = selected.Distinct();
+                                        .GroupBy(g => g.Properties.Neighborhood)
+                                        .Select(y => y.First());            
 
             foreach (var item in selected)
             {
-                Console.WriteLine(item);
+                Console.WriteLine(item.Properties.Neighborhood);
             }
         }
 
