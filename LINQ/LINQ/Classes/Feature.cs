@@ -4,11 +4,10 @@ using System.Text;
 
 namespace LINQ.Classes
 {
-    public enum FeatureType { Feature };
-
+    
     public class Feature
     {
-        public FeatureType Type { get; set; }
+        public string Type { get; set; }
 
         public Geometry Geometry { get; set; }
 
