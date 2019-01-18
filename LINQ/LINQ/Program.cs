@@ -16,7 +16,8 @@ namespace LINQ
             Console.WriteLine("Hello World!");
             Cities data = ReadJSON();
             //PrintAllNeighborHoods(data);
-            PrintAllNeighborHoodsWithName(data);
+            //PrintAllNeighborHoodsWithName(data);
+            PrintUniqueNeighborHoods(data);
             Console.ReadLine();
 
         }
@@ -40,19 +41,41 @@ namespace LINQ
             {
                 Console.WriteLine(item);
             }
+
             
         }
 
-        public static void PrintAllNeighborHoodsWithName(Cities data)
+        public static dynamic PrintAllNeighborHoodsWithName(Cities data)
         {
             var selected = from x in data.Features
-                           where x.Properties.Neighborhood != ""
+                           where x.Properties.Neighborhood != null
                            select x.Properties.Neighborhood;
+
+            selected = selected.Where(x => x != "");
+                           
 
             foreach (var item in selected)
             {
                 Console.WriteLine(item);
             }
+
+            return selected;
+        }
+
+        public static void PrintUniqueNeighborHoods(Cities data)
+        {
+            var selected = from x in data.Features
+                           where x.Properties.Neighborhood != null
+                           select x.Properties.Neighborhood;
+
+            selected = selected.Where(x => x != "");
+
+            selected = selected.Distinct();
+
+            foreach (var item in selected)
+            {
+                Console.WriteLine(item);
+            }            
         }
 
         
