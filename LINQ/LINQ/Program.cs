@@ -137,7 +137,14 @@ namespace LINQ
 
         public static void OneQuery(Cities data)
         {
+            var selected = data.Features.Where(x => x.Properties.Neighborhood != null)
+                                        .Where(x => x.Properties.Neighborhood != "")
+                                        .Select(y => y.First());
 
+            foreach (var item in selected)
+            {
+                Console.WriteLine(item);
+            }
         }
 
         
